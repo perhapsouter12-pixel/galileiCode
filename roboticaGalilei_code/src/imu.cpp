@@ -18,7 +18,7 @@ void initImu()
     angRel = (int) euler.x(); //leggiamo l'angolo che diventerà l'angolo relativo
 }
 
-float getAngoloIMU() //misuriamo l'angolo
+void aggiorna_da_IMU(float &angolo ) //misuriamo l'angolo
 {
     if(millis() - imu_t >= 20) //ogni 20 millisecondi (tempo che basta per la bussola di preparare i dati che il microcontrollore vuole)
     {
@@ -35,5 +35,5 @@ float getAngoloIMU() //misuriamo l'angolo
         angolo = (angolo < 0) ? angolo + 360 : angolo;
         imu_t = millis();
     }
-    return angolo; //il valore di angolo viene dato.
+    
 }

@@ -90,7 +90,7 @@ void initCtrl() //inizzaliziamo il pid
 
 void adjustCtrl(int angolo, int v) //ora aggiustiamo l'angolo (funzione che va chiamata ad ogni loop)
 {
-    orient = getAngoloIMU(); //leggiamo come stiamo andando
+    aggiorna_da_IMU(orient); //leggiamo come stiamo andando
     if(orient >= 180) orient -= 360; //diamo come stiamo andando in [-180; 180s]
     ref = 0;//angolo; //diamo dove vogliamo andare
     //prendiamo le componenti della velocità secondo l'angolo letto
