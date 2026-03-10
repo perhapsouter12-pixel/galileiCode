@@ -3,7 +3,6 @@
 
 Adafruit_BNO055 bno(55, 0x28); //creiamo l'istanza della classe Adafruit_BNO055, ricca di funzioni molto utili per noi.
 unsigned long imu_t = 0; //timer che affianca la funzione millis(), utile per evitare il clock stretching e varie chiamate della funzione delay()
-int angolo = 0; //angolo che la bussola andrà a leggere.
 int angRel; //angolo relativo, il nostro angolo si baserà su quello preso all'inizio
 
 void initImu()
