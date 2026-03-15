@@ -20,11 +20,9 @@ void setup() {
 }
 
 void loop() {
-  /*
-  checkLine();
-  adjustCtrl(0, 220);
-  */
-  Serial.println(getBall());
-  delay(2000);
+  //checkLine();
+  adjustCtrl(0, 0);
+  //Serial.println(getBall());
+  //delay(2000);
   
 }

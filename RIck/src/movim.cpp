@@ -106,7 +106,7 @@ void adjustCtrl(int angolo, int v) //ora aggiustiamo l'angolo (funzione che va c
                 /*Formula che prende conto il fatto che le ruote del robot sono messe a theta gradi dall'origine 0.
                 Adj è la variabile che aggiustare dove il robot sta andando */
         
-            vs[i] = (vx * sin(radians(theta[i] + 180))) + (-1 * vy * cos(radians(theta[i] + 180))) + adj;
+            vs[i] = (vx * sin(radians(theta[i] - 90))) + (-1 * vy * cos(radians(theta[i] - 90 ))) + adj;
         }
         
         /*
@@ -120,7 +120,7 @@ void adjustCtrl(int angolo, int v) //ora aggiustiamo l'angolo (funzione che va c
         for(int i = 0; i < 4; i++)
         {
             drivMot(i, vs[i]); //attiviamo i motori a seconda della velocità regolata
-            Serial.println(vs[i]);
+            //Serial.println(vs[i]);
         } 
     }
 }

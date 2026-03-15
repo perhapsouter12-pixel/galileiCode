@@ -20,8 +20,7 @@ void setup() {
 }
 
 void loop() {
-  //checkLine();
-  adjustCtrl(0, 200);
-  delay(5000);
+  checkLine();  
+  adjustCtrl(0, 0);
   
 }
